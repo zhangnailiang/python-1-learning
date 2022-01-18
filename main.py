@@ -194,3 +194,6 @@ if guess == 666:
 else:
     print("猜错了，小姐姐现在心里想的是666！")
 print("游戏结束，不玩儿啦！")
+
+
+#asdasdasdasd
