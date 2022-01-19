@@ -99,6 +99,7 @@ print(b)
 import decimal
 from decimal import Decimal, getcontext
 from imp import init_builtin
+from traceback import print_list
 
 a = decimal.getcontext()
 print(a),
@@ -183,17 +184,40 @@ print()
 if 2 > 1 and not 2 > 3:
     print("sdf")
 print("dfsf")
-a = input("input:")
-input:123 
-
-temp = input("猜一猜小姐姐想的是哪个数字？")
-guess = int(temp) # input 函数将接收的任何数据类型都默认为 str。
-if guess == 666:
-    print("你太了解小姐姐的心思了！")
-    print("哼，猜对也没有奖励！")
-else:
-    print("猜错了，小姐姐现在心里想的是666！")
-print("游戏结束，不玩儿啦！")
 
 
-#asdasdasdasd
+# temp = input("猜一猜小姐姐想的是哪个数字？")
+# guess = str(temp) # input 函数将接收的任何数据类型都默认为 str。
+
+# if guess == "666":
+#     print("guess"+guess)
+#     print("你太了解小姐姐的心思了！")
+#     print("哼，猜对也没有奖励！")
+# else:
+#     print("guess"+guess)
+#     print("猜错了，小姐姐现在心里想的是666！")
+# print("游戏结束，不玩儿啦！")
+
+
+print(isinstance(1, int))
+
+'''
+类型转换
+转换为int  str   float(x)
+'''
+
+print(int("520")),
+print(int(520.52))
+print(float("520.52")),
+print(float(520)),
+print(str(10+10)),
+
+
+#内部相加之后再  str类型转化
+print(str(10.1+5.2))
+
+
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+print("This is printed without 'end' and 'sep'"),
+for item in shoplist:
+    print(item)
