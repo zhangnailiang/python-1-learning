@@ -99,6 +99,7 @@ print(b)
 import decimal
 from decimal import Decimal, getcontext
 from imp import init_builtin
+from os import sep
 from traceback import print_list
 
 a = decimal.getcontext()
@@ -217,7 +218,66 @@ print(str(10+10)),
 print(str(10.1+5.2))
 
 
-shoplist = ['apple', 'mango', 'carrot', 'banana']
-print("This is printed without 'end' and 'sep'"),
+
+
+
+
+
+shoplist = ['apple','mango','carrot','banana']
+print("this is printed with ")
 for item in shoplist:
-    print(item)
+    print(item,end='&')
+
+print("/n")
+
+#sep是多参数想要输出时 各个参数中间的  分隔符
+for item in shoplist:
+    print(item, "another string","znlzbsbb",sep="&"),
+
+
+
+'''
+位运算
+1.原码  反码  补码
+原码就是二进制表示
+反码就是  分为 正数 和  负数
+         正数的反码   是本身   
+         负数的反码   是符号位不变  其余按位取反
+补码     正数的补码就是原码  负数的补码就是原码加一
+
+符号位就是  最高位就是符号位   0表示正数  1表示负数  其中符号位也参与运算
+'''
+#if语句
+if 2 > 1 and not 2 > 3:
+    print("Corrot judgement")
+
+
+hi = 6
+if hi > 2:
+    if hi > 7:
+        print("好棒阿尼")
+    else:
+        print("asdas")
+else:
+    print("qie  shibailele")
+
+
+#if else 合并语句
+# temp = input("请输入成绩:")
+# source = int(temp)
+# if 100 >= source >= 90:
+#     print("A")
+# elif 90 > source >= 80:
+#     print("B")
+# else:
+#     print("no pass")
+
+
+#assert关键词
+assert 3 > 7
+
+while count < 3:
+    temp = input("猜猜小姐姐想的是哪个单词")
+    guess = int(temp)
+    if guess > 8:
+        print("")
