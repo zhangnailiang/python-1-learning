@@ -100,6 +100,7 @@ import decimal
 from decimal import Decimal, getcontext
 from imp import init_builtin
 from os import sep
+import string
 from traceback import print_list
 
 a = decimal.getcontext()
@@ -274,10 +275,68 @@ else:
 
 
 #assert关键词
-assert 3 > 7
+# assert 3 > 7
 
-while count < 3:
-    temp = input("猜猜小姐姐想的是哪个单词")
-    guess = int(temp)
-    if guess > 8:
-        print("")
+
+
+# while的
+count = 0
+# while count < 3:
+#     temp = input("猜猜小姐姐想的是哪个单词？")
+#     guess = int(temp)
+#     if guess > 8:
+#         print("大了大了")
+#     else:
+#         if guess == 8:
+#             print("你太了解小姐姐的心思了")
+#             count = 3
+#         else:
+#             print("小了小了")
+#     count = count + 1
+# print("游戏结束，不玩了")
+string = "abcd"
+while string:
+    print(string)
+    string = string[1:]
+
+
+
+#while-else  循环
+count = 0
+while count < 5:
+    print("%d is less than 5" % count)
+    count = count + 1
+else:
+    print("%d is not than 5" % count)
+
+count = 0
+while count < 5:
+    print("%d is less than 5" % count)
+    count = 6
+    break
+else:
+    print("%d is less than 5" % count)
+
+#for 循环
+for i in "ILOVELSGO":
+    print(i, end=" ") #不换行输出
+member = ['张三', '李四', '刘德华', '刘六', '周润发']
+for each in member:
+    print(each)
+
+
+#range 使用的是  range(stop)就是默认从第0
+print("member的长度：",len(member))
+print("range(len(member))是什么：",range(len(member)))
+for i in range(len(member)):
+    print(member[i])
+x = "runoob"
+for i in range(len(x)):
+    print(x[i],end=" ")
+
+
+dic = {"a":1, "b":2}
+for key in dic.keys():
+    print(key, end=" ")
+for value in dic.values():
+    print(value, end=" ")
