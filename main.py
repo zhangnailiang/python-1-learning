@@ -340,3 +340,61 @@ for key in dic.keys():
     print(key, end=" ")
 for value in dic.values():
     print(value, end=" ")
+
+member = ["张三", "李四", "刘德华", "周润发"]
+for each in member:
+    print(each)
+for key, value in dic.items():
+    print(key, value, sep=":", end=" ")
+
+''''
+for else语句 for在正常执行完的情况下，之行else中的内容  
+如果for循环中 执行了跳出循环的语句  使用break
+for-else and while-else  ("for-else" is similar to "while-else."）
+'''
+for num in range(10, 20):
+    for i in range(2, num):
+        if num % i == 0:
+            j = num / i
+            print("%d 等于 %d %d" % (num, i ,j))
+            break
+    else:
+        print(num, "这是一个质数")
+
+#the range() Function
+for i in range (2,9):
+    print(i)
+
+# range() the third parameter can specify a different increment(even negative; sometimes this is called the "step")
+for a in range (1, 10, 2):
+    print(a)
+
+#enumerate  (sequence(iterable), [start = 0]);
+seasons = ["spring", "Summer", "fall", "winter"]
+lst = list(enumerate(seasons))
+print(lst)
+print(enumerate(seasons, start=1))
+
+# euqivalent use-defined function
+# def enumerate1(sequence, start = 0):
+#     n = start
+#     for i in 
+
+
+def fab(max): 
+    n, a, b = 0, 0, 1 
+    while n < max: 
+        print (b)
+        a, b = b, a + b 
+        n = n + 1
+fab(5)
+def fab(max):
+    n, a, b = 0, 0, 1
+    L = []
+    while n < max:
+        L.append(b)
+        a, b = b , a + b
+        n = n + 1
+    return L
+for n in  fab(5):
+    print (n)
